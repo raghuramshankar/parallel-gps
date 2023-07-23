@@ -18,7 +18,7 @@ Please cite the following paper [(arXiv preprint)](https://arxiv.org/abs/2102.09
 What is it?
 -----------
 
-This is an implementation of temporally parallelized and sequential state space Gaussian processes with CPU and GPU 
+This is an implementation of temporally parallelized and sequential state space Gaussian processes with CPU and GPU
 support leveraging GPflow as a framework and TensorFlow as a calculation backend.
 
 Supported covariance functions
@@ -29,13 +29,17 @@ Supported covariance functions
 * Quasi-periodic
 * Sum and product of the above
 
-Installation
-------------
-Clone or download the project
-Run `python setup.py [install|develop]` depending on the level of installation you want.
-Note that in order to use the GPU capabilities you will need to install a tensorflow compatible CUDA version.
-Note that the `requirements.txt` file is a superset of what is actually necessary to use the library and also contains packages 
-required for unittesting only.
+Installation as a package
+-------------------------
+
+1. Add this repo as submodule: ``git submodule add git@github.com:raghuramshankar/pssgp.git``
+2. Pull the latest commit on the submodule: ``git submodule update --init --recursive``
+3. Change directory to submodule: ``cd pssgp``
+4. Install as a package: ``pip install -e .``
+
+Now your python installation/virtual environment has pssgp installed as a package with all the required depednencies from ``requirements.txt``.
+
+To use GPU capabilities, install a tensorflow compatible CUDA version.
 
 Example
 -------
@@ -65,4 +69,5 @@ for model in [gp, ssgp, pssgp]:
     print(model.maximum_log_likelihood_objective())
 
 ```
+
 For more examples, see the notebooks or the runnable scripts in the experiments folder which reproduces the results of our paper.
