@@ -37,9 +37,9 @@ Installation as a package
 3. Change directory to submodule: ``cd pssgp``
 4. Install as a package: ``pip install -e .``
 
-Now your python installation/virtual environment has pssgp installed as a package with all the required depednencies from ``requirements.txt``.
+Now your python installation/virtual environment has pssgp installed as a package with all the required dependencies from ``requirements.txt``.
 
-To use GPU capabilities, install a tensorflow compatible CUDA version.
+To use GPU capabilities, install a CUDA/MPS compatible tensorflow version.
 
 Example
 -------
